@@ -7,12 +7,18 @@
     <img src="img/Logo_Carambar.png" alt="Carambar logo">
   </div>
 
-  <main>
-    <p>Jokes you can choose or add.</p>
-  </main>
+  <p>Jokes you can pick !</p>
 
+  <nav>
+    <ul>
+      <li><a routerLink="AllJokes"></a> Get all the Jokes</li>
+      <li><a routerLink="OneJoke "></a> Get one Joke</li>
+      <li><a routerLink="RandomJoke"></a> Get a random Joke</li>
+    </ul>
+  </nav>
 </header>
 
 
-
-<router-outlet />
+<main>
+  <router-outlet />
+</main>

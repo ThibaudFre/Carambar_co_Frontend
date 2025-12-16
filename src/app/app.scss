@@ -1,0 +1,70 @@
+@use  "../styles.scss";
+
+header {
+    padding: 20px 0 20px 0;
+    gap: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(240, 22, 115, 0.1);
+    h1 {
+        width: 100%;
+        color: styles.$red-color;
+    }
+
+    .logo-container {
+        background-color: rgb(243, 245, 14);
+        width: 50%;
+        border-radius: 25px;
+        transition: width 1s ease-in-out;
+
+        img {
+            width: 100%;
+        }
+    }
+    .logo-container:hover {
+        width: 60%;
+    }
+
+    p {
+        margin: 40px 0 40px 0;
+        color: styles.$red-color;
+        font: 500 30px "Caveat Brush", cursive;
+    }
+
+    nav {
+        margin: 0 10px 0 10px;
+        ul {
+            display: flex;
+            gap: 10px;
+            @media all and (min-width: 550px ) {
+                gap: 30px;
+            }
+            li {
+                cursor: pointer;
+                background-color: styles.$red-color;
+                color: white;
+                padding: 5px 10px 5px 10px;
+                list-style: none;
+                border: 1px solid styles.$red-color;
+                border-radius: 25px;
+                transition: transform 1s ease-in-out;
+            }
+            li:hover {
+                background-color: styles.$red-light-color;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+}
+
+main {
+
+    padding: 40px 10px 40px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
