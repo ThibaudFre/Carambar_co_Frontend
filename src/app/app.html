@@ -1,19 +1,21 @@
 <header>
 
-  <h1>Welcome on.. the carambar Joke's page</h1>
+  <h1>Bienvenue sur.. la page des blagues Carambar !</h1>
 
 
   <div class="logo-container">
-    <img src="img/Logo_Carambar.png" alt="Carambar logo">
+    <a routerLink="">
+      <img src="img/Logo_Carambar.png" alt="Carambar logo">
+    </a>
   </div>
 
-  <p>Jokes you can pick !</p>
+  <p>Les blagues sont à piocher !</p>
 
   <nav>
     <ul>
-      <li><a routerLink="AllJokes"></a> Get all the Jokes</li>
-      <li><a routerLink="OneJoke "></a> Get one Joke</li>
-      <li><a routerLink="RandomJoke"></a> Get a random Joke</li>
+      <li><a routerLink="/alljokes">Afficher toutes les blagues</a></li>
+      <li><a routerLink="/onejoke">Choisir une blague</a></li>
+      <li><a routerLink="/randomjoke">Obtenir une blague au hasard</a></li>
     </ul>
   </nav>
 </header>

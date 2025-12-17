@@ -1,0 +1,24 @@
+@use "../../styles.scss";
+
+.joke-container {
+    border-radius: 15px;
+    padding: 5px 15px 5px 15px;
+    margin: 20px 0 20PX 0;
+    background-color: styles.$yellow-color;
+    transition: transform 1s ease-out;
+    h3 {
+        color: styles.$red-color;
+    }
+
+    p {
+        opacity: 0;
+        font-weight: 800;
+        transition: opacity 1s ease-in-out;
+    }
+}
+.joke-container:hover {
+    transform: scale(1.2);
+    p {
+        opacity: 100;
+    }
+}

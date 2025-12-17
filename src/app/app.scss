@@ -15,7 +15,7 @@ header {
     }
 
     .logo-container {
-        background-color: rgb(243, 245, 14);
+        background-color: styles.$yellow-color;
         width: 50%;
         border-radius: 25px;
         transition: width 1s ease-in-out;
