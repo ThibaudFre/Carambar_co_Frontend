@@ -1,59 +1,23 @@
-# CarambarApp
+Welcomme on the Carambar & co App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+This is an app ready to serve you funny jokes:
 
-## Development server
+In this app you will be able to:
+- get all the jokes list
+- search a specific joke
+- search a random joke
 
-To start a local development server, run:
+To ensure an instantaneous user experience, this app uses a "Stale-While-Revalidate" strategy with localStorage.
 
-```bash
-ng serve
-```
+Note for developers: If you have previously visited the app, jokes are likely stored in your local cache. When you return or refresh, the app will display these cached jokes immediately while fetching fresh data from the API in the background.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+If you have just added a new joke via Postman or Swagger, you might see the "old" list for a brief second. Don't worry: the app will automatically sync and display your new joke as soon as the API response is received.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Links:
+- website:
+- api url: https://carambar-co-backend.onrender.com
+- repo Github Frontend: https://github.com/ThibaudFre/Carambar_co_Frontend
+- repo Github Backend: https://github.com/ThibaudFre/Carambar_co_Backend
+- Swagger: 
+    - http://localhost:3000/api-docs/ -----------> try it out in dev mode.
+    - https://carambar-co-backend.onrender.com/api-docs/ ---> try it out in production mode

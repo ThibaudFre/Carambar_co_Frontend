@@ -1,1 +1,12 @@
-<p>randomjoke works!</p>
+<div class="search-container">
+    <p>Cherche une blague au hasard:</p>
+    <button (click)="onShowAnswer()">Chercher</button>
+</div>
+
+@if (isClicked()){
+    <!--first isClicked will be true when clicking on the button it make appears the loading message-->
+    <app-loading-text type="singular"></app-loading-text>
+} @else if (joke) {
+    <!--then wen joke (the data given by the API) arrive, it replace the loading message by the Joke-->
+    <app-jokecontainer [riddle]="joke.riddle" [answer]="joke.answer"></app-jokecontainer>
+}

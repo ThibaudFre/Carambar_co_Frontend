@@ -1,1 +1,5 @@
-<p>Chargement des blagues...</p>
+@if (type() === "plural") {
+    <p>Chargement des blagues...</p>
+}@else if (type() === "singular") {
+    <p>Chargement de la blague...</p>
+}
