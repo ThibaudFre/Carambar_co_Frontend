@@ -1,1 +1,15 @@
-<p>onejoke works!</p>
+<p>Choisis une bague parmis la liste ci dessous pour l'afficher:</p>
+
+<form action="" method="get">
+    <label for="riddle"></label>
+    <select id="jokes" [formControl]="joke">
+        <option value="" disabled selected> --- Sélectionnez une Blague --- </option>
+        @for (seed of seeds; track seed.id) {
+            <option value="{{seed.id}}">{{seed.riddle}}"</option>
+        }
+    </select>
+</form>
+
+@if (isJokeChoosen(); as joke) {
+    <app-jokecontainer [riddle]="jokeChoosen().riddle" [answer]="jokeChoosen().answer"></app-jokecontainer>
+}
