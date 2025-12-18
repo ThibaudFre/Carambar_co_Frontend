@@ -1,7 +1,8 @@
-
-@for (joke of jokes; track $index) {
-    <app-jokecontainer 
-        riddle= {{joke.riddle}} 
-        answer= {{joke.answer}}>
-    </app-jokecontainer>
+@if (seeds) {
+    @for (seed of seeds; track seed.id) {
+        <app-jokecontainer [riddle]="seed.riddle" [answer]="seed.answer">
+        </app-jokecontainer>
+    }
+} @else {
+    <app-loading-text></app-loading-text>
 }
