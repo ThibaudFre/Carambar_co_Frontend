@@ -3,6 +3,7 @@
 .joke-container {
     border-radius: 15px;
     padding: 5px 15px 5px 15px;
+    transform: scale(0.90);
     margin: 20px 0 20PX 0;
     background-color: styles.$yellow-color;
     transition: transform 1s ease-out;
@@ -17,7 +18,7 @@
     }
 }
 .joke-container:hover {
-    transform: scale(1.2);
+    transform: scale(1);
     p {
         opacity: 100;
     }

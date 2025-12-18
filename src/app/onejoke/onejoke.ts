@@ -30,7 +30,7 @@ export class Onejoke implements OnInit {
       })
     this.joke.valueChanges
       .subscribe((selectedJoke) => {
-        console.log(selectedJoke)
+
         this.http.get(`https://carambar-co-backend.onrender.com/jokes/${selectedJoke}`).subscribe({
           next: (response) => {
             this.jokeChoosen.set(response);

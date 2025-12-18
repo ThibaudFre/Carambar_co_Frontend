@@ -1,15 +1,21 @@
-<p>Choisis une bague parmis la liste ci dessous pour l'afficher:</p>
+<div class="select-joke-container">
+    <p>Choisis une bague parmis la liste ci dessous pour l'afficher:</p>
+    @if(seeds) {
+        <form action="" method="get">
+            <label for="riddle"></label>
+            <select id="jokes" [formControl]="joke">
+                <option value="" disabled selected> --- Sélectionnez une Blague --- </option>
+                @for (seed of seeds; track seed.id) {
+                <option value="{{seed.id}}">{{seed.riddle}}"</option>
+                }
+            </select>
+        </form>
+    } @else {
+        <p class="loading">Chargement des blagues...</p>
+    }
 
-<form action="" method="get">
-    <label for="riddle"></label>
-    <select id="jokes" [formControl]="joke">
-        <option value="" disabled selected> --- Sélectionnez une Blague --- </option>
-        @for (seed of seeds; track seed.id) {
-            <option value="{{seed.id}}">{{seed.riddle}}"</option>
-        }
-    </select>
-</form>
+</div>
 
 @if (isJokeChoosen(); as joke) {
-    <app-jokecontainer [riddle]="jokeChoosen().riddle" [answer]="jokeChoosen().answer"></app-jokecontainer>
+<app-jokecontainer [riddle]="jokeChoosen().riddle" [answer]="jokeChoosen().answer"></app-jokecontainer>
 }
